@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mini Red Social</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Mi Red Social</h2>
+</header>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <div id="login">
+    <h3>Iniciar sesión</h3>
+    <input type="text" id="username" placeholder="Usuario"><br><br>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <!-- FEED -->
+  <div id="feed" class="hidden">
+    <button onclick="verPerfil()">Ver perfil</button>
+    <h3>Publicaciones</h3>
+    <div id="posts"></div>
+  </div>
+
+  <!-- PERFIL -->
+  <div id="perfil" class="hidden">
+    <button onclick="volverFeed()">Volver</button>
+    <h3 id="nombrePerfil"></h3>
+    <p>Este es tu perfil 👤</p>
+  </div>
+
+</div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+</html>
