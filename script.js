@@ -5,6 +5,7 @@ let publicaciones = [
     usuario: "Ana",
     contenido: "Hola mundo 🌍",
     likes: 0,
+    risa: 0,
     imagen: "https://i.pravatar.cc/40?u=Carlos",
     comentarios : []
 
@@ -13,6 +14,15 @@ let publicaciones = [
     usuario: "Carlos",
     contenido: "Mi primera publicación 😎",
     likes: 0,
+    risa: 0,
+    imagen:  "https://i.pravatar.cc/40?u=Ana",
+    comentarios : []
+  },
+  {
+    usuario: "Juan Perez",
+    contenido: "Me divierte este dia 😎",
+    likes: 0,
+    risa :0,
     imagen:  "https://i.pravatar.cc/40?u=Ana",
     comentarios : []
   }
@@ -51,6 +61,8 @@ function renderPosts() {
 
       <p>${post.contenido}</p>
       <button onclick="like(${index})">❤️ ${post.likes}</button>
+      <button onclick="risa(${index})">risa ${post.risa}</button>
+      
       <br><br>
       <input placeholder="Comentar..." id="coment-${index}">
       <button onclick="comentar(${index})">Enviar</button>
@@ -73,6 +85,11 @@ function like(index) {
   publicaciones[index].likes++;
   renderPosts();
 }
+  function risa(index){
+    publicaciones[index].risa++;
+    renderPosts();
+  }
+
 
 // COMENTAR
 function comentar(index) {
@@ -84,7 +101,7 @@ function comentar(index) {
   publicaciones[index].comentarios.push({
    usuario : usuarioActual,
    texto :texto,
-   imagen :  "https://i.pravatar.cc/40?u="
+   imagen :  "https://i.pravatar.cc/100?u=" + usuarioActual
   });
   input.value = "";
 
@@ -95,8 +112,8 @@ function comentar(index) {
 function verPerfil() {
   document.getElementById("feed").classList.add("hidden");
   document.getElementById("perfil").classList.remove("hidden");
-
   document.getElementById("nombrePerfil").innerText = usuarioActual;
+  document.getElementById("fotoPerfil").src ="https://i.pravatar.cc/100?u="+ usuarioActual;
 }
 
 function volverFeed() {
