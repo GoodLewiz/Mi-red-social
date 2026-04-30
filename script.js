@@ -2,8 +2,8 @@ let usuarioActual = "";
 
 let publicaciones = [
   {
-    usuario: "Ana",
-    contenido: "Hola mundo 🌍",
+    usuario: "Ana Maria Monsalve",
+    contenido: "Hola espero que esten bien 🌍",
     likes: 0,
     risa: 0,
     imagen: "https://i.pravatar.cc/40?u=Carlos",
@@ -11,7 +11,7 @@ let publicaciones = [
 
   },
   {
-    usuario: "Carlos",
+    usuario: "Carlos Patiño",
     contenido: "Mi primera publicación 😎",
     likes: 0,
     risa: 0,
@@ -23,7 +23,15 @@ let publicaciones = [
     contenido: "Me divierte este dia 😎",
     likes: 0,
     risa :0,
-    imagen:  "https://i.pravatar.cc/40?u=Ana",
+    imagen:  "https://i.pravatar.cc/40?",
+    comentarios : []
+  },
+  {
+    usuario: "Juan Perez",
+    contenido: "Esta es mi actual foto de perfil 😎",
+    likes: 0,
+    risa :0,
+    imagen:  "https://i.pravatar.cc/67?",
     comentarios : []
   }
 ];
@@ -61,7 +69,7 @@ function renderPosts() {
 
       <p>${post.contenido}</p>
       <button onclick="like(${index})">❤️ ${post.likes}</button>
-      <button onclick="risa(${index})">risa ${post.risa}</button>
+      <button onclick="risa(${index})">😀${post.risa}</button>
       
       <br><br>
       <input placeholder="Comentar..." id="coment-${index}">
