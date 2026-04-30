@@ -30,3 +30,16 @@ button {
 .hidden {
   display: none;
 }
+
+#login{
+  width: 300px;
+  margin: 60px;
+  padding: 20px;
+  background-color: blue;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#Login button{
+  background-color: green;
+}
